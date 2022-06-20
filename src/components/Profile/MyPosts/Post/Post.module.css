@@ -1,0 +1,10 @@
+  .item {
+     color: #6b9829;
+  }
+
+  .item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
