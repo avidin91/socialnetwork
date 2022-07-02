@@ -8,6 +8,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Set from "./components/Set/Set";
 import {Route, Routes} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 
@@ -21,11 +22,8 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage}
-                                                                   dispatch={props.dispatch}
-                                                                   dialogsPage={props.state.dialogsPage} />}/>
-                        <Route path='/profile' element={<Profile profilePage={props.state.profilePage}
-                                                                 dispatch={props.dispatch} />}/>
+                        <Route path='/dialogs/*' element={<DialogsContainer store={props.store}/>}/>
+                        <Route path='/profile' element={<Profile store={props.store} />}/>
                         <Route path='/news' element={<News/>}/>
                         <Route path='/Music' element={<Music/>}/>
                         <Route path='/Set' element={<Set/>}/>
