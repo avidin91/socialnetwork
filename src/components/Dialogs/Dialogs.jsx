@@ -5,9 +5,9 @@ import DialogItem from "./DialogItem/DialogItem";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogsData.map(currentValue => {return <DialogItem name={currentValue.name} id={currentValue.id}/>});
+    let dialogsElements = props.dialogsData.map(currentValue => {return <DialogItem name={currentValue.name} key={currentValue.id} id={currentValue.id}/>});
 
-    let messagesElements = props.messagesData.map(message => {return <Message message={message.message}/>});
+    let messagesElements = props.messagesData.map(message => {return <Message message={message.message} key={message.id} />});
 
     let newMessageText = props.newMessageText;
 
@@ -30,7 +30,7 @@ const Dialogs = (props) => {
                 {messagesElements}
             </div>
             <div>
-                <textarea placeholder='Text here...' onChange={onMessageChange} value={newMessageText}></textarea>
+                <textarea onChange={onMessageChange} value={newMessageText} placeholder='Text here...' ></textarea>
                 <button onClick={onSendMessageClick}> Push message</button>
             </div>
         </div>

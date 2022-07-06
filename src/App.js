@@ -6,6 +6,7 @@ import Profile from './components/Profile/Profile';
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Set from "./components/Set/Set";
+import Users from "./components/Users/Users";
 import {Route, Routes} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
@@ -26,6 +27,7 @@ const App = (props) => {
                         <Route path='/news' element={<News/>}/>
                         <Route path='/Music' element={<Music/>}/>
                         <Route path='/Set' element={<Set/>}/>
+                        <Route path='/Users' element={<Users/>}/>
                     </Routes>
                 </div>
             </div>

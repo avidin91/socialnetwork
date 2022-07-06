@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
     let postElements = props.postData.map(currentValue => {
-        return <Post message={currentValue.message} likesCount={currentValue.likesCount}/>
+        return <Post message={currentValue.message} key={currentValue.id} likesCount={currentValue.likesCount}/>
     });
 
     let newPostText = props.newPostText;
