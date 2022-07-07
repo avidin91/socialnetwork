@@ -9,6 +9,7 @@ import Set from "./components/Set/Set";
 import Users from "./components/Users/Users";
 import {Route, Routes} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 
@@ -27,7 +28,7 @@ const App = (props) => {
                         <Route path='/news' element={<News/>}/>
                         <Route path='/Music' element={<Music/>}/>
                         <Route path='/Set' element={<Set/>}/>
-                        <Route path='/Users' element={<Users/>}/>
+                        <Route path='/Users' element={<UsersContainer/>}/>
                     </Routes>
                 </div>
             </div>
